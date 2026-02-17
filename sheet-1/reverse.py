@@ -1,17 +1,11 @@
-class Solution {
-  public:
-    void reverseArray(vector<int> &arr) {
-        int start = 0;
-        int end = arr.size() - 1;
-
-        while (start < end) {
-            // Swap elements
-            int temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-
-            start++;
-            end--;
-        }
-    }
-};
+class Solution:
+    def reverseArray(self, arr):
+        left = 0
+        right = len(arr) - 1
+        
+        while left < right:
+            arr[left], arr[right] = arr[right], arr[left]
+            left += 1
+            right -= 1
+        
+        return arr
